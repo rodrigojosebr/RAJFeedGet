@@ -1,7 +1,20 @@
+interface ButtonProps {
+  text?: string;
+}
+
+function Button(props: ButtonProps) {
+  return (
+    <button>{props.text ?? 'Default'}</button>
+  )
+}
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <Button text="Hello 1" />
+      <Button text="Hello 2" />
+      <Button />
+    </div>
   )
 }
 
